@@ -1,0 +1,1885 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Pavão | Pizza no Jardim São Luís - São Paulo</title>
+    <meta name="description" content="Pizzaria Pavão no Jardim São Luís, São Paulo. Pizzas para entrega e para viagem, com qualidade, sabor e atendimento especial.">
+    
+    <!-- Open Graph / SEO -->
+    <meta property="og:title" content="Pizzaria Pavão | Pizza no Jardim São Luís - São Paulo">
+    <meta property="og:description" content="Pizzaria Pavão no Jardim São Luís, São Paulo. Pizzas para entrega e para viagem, com qualidade, sabor e atendimento especial.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image" content="imagens/logo.jpg">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#FAF8F5">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pv-bg-main': '#FAF8F5',
+                        'pv-bg-alt': '#F3EFE6',
+                        'pv-card': '#FFFFFF',
+                        'pv-black': '#050505',
+                        'pv-black-soft': '#141311',
+                        'pv-gold': '#B88A32',
+                        'pv-gold-light': '#D8B26E',
+                        'pv-gold-metallic': '#B88A32',
+                        'pv-gold-dark': '#8C641F',
+                        'pv-cream': '#F5F0E6',
+                        'pv-white': '#FFFFFF',
+                        'pv-gray': '#5C574E',
+                        'pv-gray-dark': '#272727',
+                        'pv-whatsapp': '#25D366',
+                    },
+                    fontFamily: {
+                        'heading': ['"Cormorant Garamond"', 'serif'],
+                        'body': ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Light Luxury CSS (Marfim, Ouro & Preto Nobre do Logo) -->
+    <style>
+        :root {
+            --color-bg-main: #FAF8F5;
+            --color-bg-alt: #F3EFE6;
+            --color-card: #FFFFFF;
+            --color-black: #050505;
+            --color-black-soft: #141311;
+            --color-text-main: #141311;
+            --color-text-muted: #5C574E;
+            --color-gold: #B88A32;
+            --color-gold-light: #D8B26E;
+            --color-gold-dark: #8C641F;
+            --color-gold-deep: #704E14;
+            --color-cream: #F5F0E6;
+            --color-white: #FFFFFF;
+            --color-whatsapp: #25D366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--color-bg-main);
+            color: var(--color-text-main);
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: #B88A32;
+            color: #FFFFFF;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F3EFE6; }
+        ::-webkit-scrollbar-thumb { background: #B88A32; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #8C641F; }
+
+        /* Headings */
+        .heading-gold {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--color-gold-dark);
+            letter-spacing: 0.04em;
+        }
+
+        /* Ornamental Peacock Dividers */
+        .divider-gold {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin: 18px auto;
+        }
+        .divider-gold::before,
+        .divider-gold::after {
+            content: '';
+            height: 1px;
+            width: 70px;
+            background: linear-gradient(90deg, transparent, #B88A32, transparent);
+        }
+        .divider-gold .peacock-feather-icon {
+            width: 24px;
+            height: 24px;
+            color: #8C641F;
+            filter: drop-shadow(0 0 3px rgba(184, 138, 50, 0.3));
+        }
+
+        /* Shimmering Text on Light Background */
+        .text-shimmer {
+            background: linear-gradient(90deg, #704E14 0%, #B88A32 40%, #D8B26E 60%, #704E14 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textShimmer 4s linear infinite;
+        }
+
+        @keyframes textShimmer {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Light Luxury Cards */
+        .card-luxury {
+            background: #FFFFFF;
+            border: 1px solid rgba(184, 138, 50, 0.22);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            box-shadow: 0 8px 24px -6px rgba(140, 100, 31, 0.07), 0 2px 6px rgba(0, 0, 0, 0.03);
+        }
+        .card-luxury::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #B88A32, transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .card-luxury:hover {
+            border-color: rgba(184, 138, 50, 0.45);
+            transform: translateY(-5px);
+            box-shadow: 0 16px 36px -8px rgba(140, 100, 31, 0.16), 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        .card-luxury:hover::before { opacity: 1; }
+
+        .gold-border-glow {
+            border: 1.5px solid rgba(184, 138, 50, 0.5);
+            box-shadow: 0 10px 30px -5px rgba(184, 138, 50, 0.18);
+        }
+
+        /* Navbar Light Luxury */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            background: rgba(250, 248, 245, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(184, 138, 50, 0.16);
+        }
+        .navbar.scrolled {
+            background: rgba(250, 248, 245, 0.98);
+            box-shadow: 0 4px 24px rgba(140, 100, 31, 0.08);
+            border-bottom: 1px solid rgba(184, 138, 50, 0.3);
+        }
+        .nav-link {
+            position: relative;
+            color: #141311;
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            padding: 6px 0;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 50%;
+            width: 0; height: 1.5px;
+            background: linear-gradient(90deg, #8C641F, #B88A32, #D8B26E);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover { color: #8C641F; }
+        .nav-link:hover::after { width: 100%; }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100vh;
+            background: rgba(250, 248, 245, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 26px;
+            transform: translateX(100%);
+            transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .mobile-menu.active { transform: translateX(0); }
+        .mobile-menu .nav-link { font-size: 1.15rem; letter-spacing: 0.18em; color: #141311; }
+
+        /* Hamburger */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 8px;
+        }
+        .hamburger span {
+            display: block; width: 26px; height: 1.5px;
+            background: #8C641F;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        /* Buttons */
+        .btn-gold {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 13px 30px;
+            background: linear-gradient(135deg, #A87E2C, #C9A45C, #E2C47A);
+            color: #050505;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.78rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(184, 138, 50, 0.28);
+        }
+        .btn-gold::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s ease;
+        }
+        .btn-gold:hover::before { left: 100%; }
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(184, 138, 50, 0.4);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 28px;
+            background: #FFFFFF;
+            color: #8C641F;
+            border: 1.5px solid #8C641F;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.78rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(140, 100, 31, 0.06);
+        }
+        .btn-outline:hover {
+            background: #8C641F;
+            color: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(140, 100, 31, 0.25);
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #25D366, #1fad4e);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.78rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 18px rgba(37, 211, 102, 0.28);
+        }
+        .btn-whatsapp:hover {
+            background: linear-gradient(135deg, #27e06d, #22ba54);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 26px rgba(37, 211, 102, 0.45);
+        }
+
+        /* Hero Section Styling (Light & Luminous) */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: #FAF8F5;
+            padding-top: 80px;
+        }
+        .hero-bg-image {
+            position: absolute;
+            inset: 0;
+            background-image: url('imagens/hero-pizza.jpg');
+            background-size: cover;
+            background-position: center 40%;
+            opacity: 0.22;
+            filter: contrast(1.1) saturate(1.1);
+            transform: scale(1.04);
+            transition: transform 10s ease-out;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(250, 248, 245, 0.5) 0%, rgba(250, 248, 245, 0.88) 60%, #FAF8F5 100%),
+                        linear-gradient(to bottom, rgba(250, 248, 245, 0.85) 0%, transparent 40%, rgba(250, 248, 245, 0.95) 90%, #FAF8F5 100%);
+        }
+
+        /* Particle Canvas for Golden Dust / Embers */
+        #embersCanvas {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        /* Concentric Rings around Logo - Highlights the black seal */
+        .logo-halo {
+            position: relative;
+            display: inline-block;
+        }
+        .logo-halo::before {
+            content: '';
+            position: absolute;
+            inset: -14px;
+            border-radius: 50%;
+            border: 1.5px dashed rgba(184, 138, 50, 0.45);
+            animation: rotateSlow 35s linear infinite;
+        }
+        .logo-halo::after {
+            content: '';
+            position: absolute;
+            inset: -26px;
+            border-radius: 50%;
+            border: 1px solid rgba(184, 138, 50, 0.25);
+        }
+
+        @keyframes rotateSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Golden Pulse */
+        @keyframes goldPulse {
+            0%, 100% { box-shadow: 0 0 25px rgba(184, 138, 50, 0.2); }
+            50% { box-shadow: 0 0 50px rgba(184, 138, 50, 0.45); }
+        }
+        .gold-pulse-box {
+            animation: goldPulse 4s ease-in-out infinite;
+        }
+
+        /* Section Spacing */
+        .section-padding { padding: 110px 0; }
+
+        /* Badge Gold */
+        .badge-gold {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 16px;
+            border: 1px solid rgba(184, 138, 50, 0.35);
+            background: rgba(184, 138, 50, 0.08);
+            color: #8C641F;
+            font-size: 0.7rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            font-weight: 700;
+            border-radius: 20px;
+        }
+
+        /* Corner Ornaments */
+        .corner-ornament-tl { position: absolute; top: 8px; left: 8px; width: 14px; height: 14px; border-top: 1.5px solid #8C641F; border-left: 1.5px solid #8C641F; pointer-events: none; }
+        .corner-ornament-tr { position: absolute; top: 8px; right: 8px; width: 14px; height: 14px; border-top: 1.5px solid #8C641F; border-right: 1.5px solid #8C641F; pointer-events: none; }
+        .corner-ornament-bl { position: absolute; bottom: 8px; left: 8px; width: 14px; height: 14px; border-bottom: 1.5px solid #8C641F; border-left: 1.5px solid #8C641F; pointer-events: none; }
+        .corner-ornament-br { position: absolute; bottom: 8px; right: 8px; width: 14px; height: 14px; border-bottom: 1.5px solid #8C641F; border-right: 1.5px solid #8C641F; pointer-events: none; }
+
+        /* Card Category Tabs */
+        .tab-btn {
+            background: #FFFFFF;
+            border: 1px solid rgba(184, 138, 50, 0.28);
+            color: #5C574E;
+            padding: 9px 22px;
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            border-radius: 2px;
+        }
+        .tab-btn:hover {
+            border-color: #8C641F;
+            color: #8C641F;
+        }
+        .tab-btn.active {
+            background: linear-gradient(135deg, #A87E2C, #C9A45C);
+            color: #050505;
+            font-weight: 700;
+            border-color: #8C641F;
+            box-shadow: 0 4px 14px rgba(184, 138, 50, 0.3);
+        }
+
+        /* Form Controls */
+        .form-input {
+            background: #FAF8F5;
+            border: 1.5px solid rgba(184, 138, 50, 0.28);
+            color: #141311;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            padding: 14px 16px;
+            width: 100%;
+            transition: all 0.3s ease;
+            outline: none;
+            border-radius: 2px;
+        }
+        .form-input:focus {
+            border-color: #8C641F;
+            background: #FFFFFF;
+            box-shadow: 0 0 0 2px rgba(184, 138, 50, 0.15), 0 0 15px rgba(184, 138, 50, 0.15);
+        }
+        .form-input::placeholder { color: #8C867B; font-size: 0.85rem; }
+
+        .form-label {
+            display: block;
+            color: #704E14;
+            font-size: 0.72rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .form-error {
+            color: #d32f2f;
+            font-size: 0.75rem;
+            margin-top: 5px;
+            display: none;
+        }
+        .form-error.active { display: block; }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366, #1fad4e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.45);
+            z-index: 998;
+            transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: floatPulse 3s infinite;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.12) rotate(8deg);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.65);
+        }
+        .whatsapp-float .tooltip {
+            position: absolute;
+            right: 74px;
+            background: #FFFFFF;
+            color: #141311;
+            padding: 9px 16px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateX(8px);
+            border: 1px solid rgba(184, 138, 50, 0.3);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        .whatsapp-float:hover .tooltip {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        @keyframes floatPulse {
+            0%, 100% { transform: translateY(0); box-shadow: 0 6px 25px rgba(37, 211, 102, 0.45); }
+            50% { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6); }
+        }
+
+        /* Reveal on Scroll Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-left.visible { opacity: 1; transform: translateX(0); }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+        /* Media Queries for Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .reveal, .reveal-left, .reveal-right { opacity: 1; transform: none; }
+            html { scroll-behavior: auto; }
+            #embersCanvas { display: none; }
+        }
+
+        @media (max-width: 640px) {
+            .whatsapp-float { bottom: 18px; right: 18px; width: 54px; height: 54px; }
+            .whatsapp-float .tooltip { display: none; }
+        }
+    </style>
+
+    <!-- Schema.org JSON-LD (Strictly Real Data per SPEC) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Pizzaria Pavão",
+        "image": "imagens/logo.jpg",
+        "description": "Pizzaria Pavão no Jardim São Luís, São Paulo. Pizzas para entrega e para viagem, com qualidade, sabor e atendimento especial.",
+        "servesCuisine": "Pizza",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Tv. do Carteiro, 3",
+            "addressLocality": "São Paulo",
+            "addressRegion": "SP",
+            "postalCode": "05813-045",
+            "addressCountry": "BR"
+        },
+        "telephone": "+551158519187",
+        "paymentAccepted": "Cartão de crédito, Cartão de débito, Pagamento por dispositivo móvel via NFC",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "reviewCount": "27"
+        }
+    }
+    </script>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- 1. HEADER / NAVBAR -->
+<!-- ============================================================ -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Navegação principal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <!-- Brand Logo -->
+            <a href="#inicio" class="flex items-center gap-3 group" aria-label="Pizzaria Pavão - Início">
+                <div class="relative">
+                    <img src="imagens/logo.jpg" alt="Logo Pizzaria Pavão" class="h-12 md:h-14 w-12 md:w-14 rounded-full border-2 border-[#B88A32] object-cover group-hover:border-[#8C641F] transition-colors duration-300 shadow-md">
+                </div>
+                <div class="flex flex-col">
+                    <span class="heading-gold text-lg md:text-xl font-bold tracking-widest text-[#141311] group-hover:text-[#8C641F] transition-colors">PIZZARIA <span class="text-shimmer">PAVÃO</span></span>
+                    <span class="text-[#8C641F] text-[9px] tracking-[0.25em] uppercase font-body font-semibold -mt-1">Jardim São Luís</span>
+                </div>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="#inicio" class="nav-link">Início</a>
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#destaque" class="nav-link">Destaque</a>
+                <a href="#cardapio" class="nav-link">Cardápio</a>
+                <a href="#como-pedir" class="nav-link">Como Pedir</a>
+                <a href="#avaliacoes" class="nav-link">Avaliações</a>
+                <a href="#contato" class="nav-link">Localização</a>
+                <a href="https://wa.me/551158519187?text=Ol%C3%A1%2C%20Pizzaria%20Pav%C3%A3o!%20Gostaria%20de%20fazer%20um%20pedido." target="_blank" rel="noopener noreferrer" class="btn-whatsapp text-xs py-2.5 px-5">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Pedir pelo WhatsApp
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button class="hamburger lg:hidden" id="hamburger" aria-label="Abrir Menu de Navegação" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Navigation Drawer -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu mobile">
+    <a href="#inicio" class="nav-link mobile-nav-link">Início</a>
+    <a href="#sobre" class="nav-link mobile-nav-link">Sobre</a>
+    <a href="#destaque" class="nav-link mobile-nav-link">Destaque</a>
+    <a href="#cardapio" class="nav-link mobile-nav-link">Cardápio</a>
+    <a href="#como-pedir" class="nav-link mobile-nav-link">Como Pedir</a>
+    <a href="#avaliacoes" class="nav-link mobile-nav-link">Avaliações</a>
+    <a href="#contato" class="nav-link mobile-nav-link">Localização</a>
+    <a href="https://wa.me/551158519187?text=Ol%C3%A1%2C%20Pizzaria%20Pav%C3%A3o!%20Gostaria%20de%20fazer%20um%20pedido." target="_blank" rel="noopener noreferrer" class="btn-whatsapp mt-4">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Pedir pelo WhatsApp
+    </a>
+</div>
+
+<!-- ============================================================ -->
+<!-- 2. HERO -->
+<!-- ============================================================ -->
+<section class="hero" id="inicio" aria-label="Início">
+    <!-- Atmospheric Background Image with Soft Warm Overlay -->
+    <div class="hero-bg-image" id="heroBgImage"></div>
+    <div class="hero-overlay"></div>
+
+    <!-- Canvas for floating golden dust -->
+    <canvas id="embersCanvas"></canvas>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center px-4 py-16 sm:py-24 max-w-4xl mx-auto flex flex-col items-center">
+        
+        <!-- Logo with concentric ornate rings - Official black medal against light ivory -->
+        <div class="reveal mb-8">
+            <div class="logo-halo gold-pulse-box rounded-full p-2 bg-white/70 backdrop-blur-md shadow-xl">
+                <img src="imagens/logo.jpg" alt="Logo oficial Pizzaria Pavão - Pavão estilizado dourado com símbolo de pizza" class="w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full border-2 border-[#B88A32] object-cover shadow-2xl" loading="eager">
+            </div>
+        </div>
+
+        <!-- Badge -->
+        <div class="reveal mb-4" style="transition-delay: 0.15s;">
+            <span class="badge-gold">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Pizzaria Tradicional no Jardim São Luís
+            </span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="heading-gold text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-4 reveal text-[#141311]" style="transition-delay: 0.25s;">
+            PIZZA BOA TEM NOME.
+        </h1>
+
+        <!-- Divider with Peacock Feather motif -->
+        <div class="divider-gold reveal" style="transition-delay: 0.3s;">
+            <svg class="peacock-feather-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2C8 6 6 11 6 16c0 3.3 2.7 6 6 6s6-2.7 6-6c0-5-2-10-6-14z"/>
+                <circle cx="12" cy="15" r="2.5" fill="currentColor"/>
+                <path d="M12 17.5V22"/>
+            </svg>
+        </div>
+
+        <!-- Subtitle -->
+        <p class="text-[#423E37] text-base sm:text-xl font-normal leading-relaxed max-w-2xl mx-auto mb-6 reveal" style="transition-delay: 0.35s;">
+            Na <strong class="font-bold text-[#141311]">Pizzaria Pavão</strong>, sabor, qualidade e aquele toque especial fazem cada pizza ser uma experiência inesquecível.
+        </p>
+
+        <!-- Rating (Exact SPEC Data: 4,5 estrelas • 27 avaliações) -->
+        <div class="flex items-center gap-3 bg-white/90 border border-[#B88A32]/35 px-5 py-2.5 rounded-full mb-8 backdrop-blur-md shadow-md reveal" style="transition-delay: 0.45s;">
+            <div class="flex text-[#B88A32] text-lg" aria-label="Avaliação 4,5 de 5 estrelas">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span class="opacity-60">★</span>
+            </div>
+            <div class="h-4 w-px bg-[#B88A32]/40"></div>
+            <span class="text-[#141311] text-xs sm:text-sm font-semibold tracking-wide">4,5 estrelas • 27 avaliações reais</span>
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-8 reveal" style="transition-delay: 0.55s;">
+            <a href="#cardapio" class="btn-outline w-full sm:w-auto">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+                Ver Cardápio
+            </a>
+            <a href="https://wa.me/551158519187?text=Ol%C3%A1%2C%20Pizzaria%20Pav%C3%A3o!%20Gostaria%20de%20fazer%20um%20pedido." target="_blank" rel="noopener noreferrer" class="btn-gold w-full sm:w-auto">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Pedir pelo WhatsApp
+            </a>
+        </div>
+
+        <!-- Services -->
+        <div class="reveal" style="transition-delay: 0.65s;">
+            <p class="text-[#7A7468] text-xs tracking-[0.25em] uppercase font-body font-semibold flex items-center gap-3">
+                <span class="inline-block w-2 h-2 rounded-full bg-[#B88A32]"></span>
+                Entrega &bull; Para Viagem
+                <span class="inline-block w-2 h-2 rounded-full bg-[#B88A32]"></span>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 3. SOBRE A PIZZARIA -->
+<!-- ============================================================ -->
+<section class="section-padding bg-[#F3EFE6] relative overflow-hidden" id="sobre" aria-label="Sobre a Pizzaria Pavão">
+    <!-- Subtle Golden Background Glow -->
+    <div class="absolute top-1/2 left-0 w-96 h-96 bg-[#B88A32]/10 rounded-full blur-3xl pointer-events-none -translate-y-1/2"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-16 reveal">
+            <span class="badge-gold mb-3">Tradição & Dedicação</span>
+            <h2 class="heading-gold text-3xl sm:text-4xl md:text-5xl font-bold mb-3">UMA PIZZA FEITA PARA AGRADAR</h2>
+            <div class="divider-gold">
+                <svg class="peacock-feather-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 2C8 6 6 11 6 16c0 3.3 2.7 6 6 6s6-2.7 6-6c0-5-2-10-6-14z"/>
+                    <circle cx="12" cy="15" r="2.5" fill="currentColor"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Split Grid: Image on Left + Narrative & Pillars on Right -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            
+            <!-- Left: Artisanal Ingredients Visual Showcase -->
+            <div class="lg:col-span-5 reveal-left">
+                <div class="relative group">
+                    <!-- Gold Offset Frame -->
+                    <div class="absolute -inset-3 border-2 border-[#B88A32]/35 -rotate-1 rounded-sm transition-transform duration-500 group-hover:rotate-0 group-hover:border-[#8C641F]"></div>
+                    
+                    <div class="relative overflow-hidden rounded-sm border border-[#B88A32]/30 shadow-2xl bg-white">
+                        <img src="imagens/ingredientes-artesanais.jpg" alt="Ingredientes selecionados para pizzas artesanais na Pizzaria Pavão" class="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        
+                        <!-- Floating Glass Badge -->
+                        <div class="absolute bottom-6 left-6 right-6 p-4 bg-white/95 backdrop-blur-md border border-[#B88A32]/40 shadow-lg">
+                            <p class="heading-gold text-base font-bold text-[#8C641F]">Ingredientes Rigorosamente Selecionados</p>
+                            <p class="text-[#5C574E] text-xs font-body mt-1">Farinha especial, azeite extra virgem e molho fresco preparado com carinho.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Text & 3 Pillars -->
+            <div class="lg:col-span-7 reveal-right">
+                <p class="text-[#2C2A26] text-base sm:text-lg leading-relaxed font-body font-normal mb-8">
+                    A <strong class="text-[#8C641F] font-bold">Pizzaria Pavão</strong> atende o Jardim São Luís e região oferecendo pizzas para entrega e para viagem. A nossa proposta é unir sabor inconfundível, qualidade superior e praticidade no atendimento para você aproveitar momentos especiais com uma pizza de verdade.
+                </p>
+
+                <!-- 3 Pillars Grid (SPEC) -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                    
+                    <!-- Card 1: Qualidade -->
+                    <div class="card-luxury p-6 text-center group">
+                        <div class="corner-ornament-tl"></div>
+                        <div class="corner-ornament-br"></div>
+                        <div class="w-14 h-14 mx-auto mb-4 rounded-full border-2 border-[#B88A32]/40 flex items-center justify-center bg-[#FAF8F5] group-hover:border-[#8C641F] transition-colors shadow-sm">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8C641F" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <h3 class="heading-gold text-lg font-bold mb-2">QUALIDADE</h3>
+                        <p class="text-[#5C574E] text-xs font-body leading-relaxed">
+                            Produtos selecionados e pizzas preparadas para entregar muito sabor.
+                        </p>
+                    </div>
+
+                    <!-- Card 2: Agilidade -->
+                    <div class="card-luxury p-6 text-center group">
+                        <div class="corner-ornament-tl"></div>
+                        <div class="corner-ornament-br"></div>
+                        <div class="w-14 h-14 mx-auto mb-4 rounded-full border-2 border-[#B88A32]/40 flex items-center justify-center bg-[#FAF8F5] group-hover:border-[#8C641F] transition-colors shadow-sm">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8C641F" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <h3 class="heading-gold text-lg font-bold mb-2">AGILIDADE</h3>
+                        <p class="text-[#5C574E] text-xs font-body leading-relaxed">
+                            Entrega rápida e atendimento pensado para facilitar seu pedido.
+                        </p>
+                    </div>
+
+                    <!-- Card 3: Sabor -->
+                    <div class="card-luxury p-6 text-center group">
+                        <div class="corner-ornament-tl"></div>
+                        <div class="corner-ornament-br"></div>
+                        <div class="w-14 h-14 mx-auto mb-4 rounded-full border-2 border-[#B88A32]/40 flex items-center justify-center bg-[#FAF8F5] group-hover:border-[#8C641F] transition-colors shadow-sm">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8C641F" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </div>
+                        <h3 class="heading-gold text-lg font-bold mb-2">SABOR</h3>
+                        <p class="text-[#5C574E] text-xs font-body leading-relaxed">
+                            Sabores clássicos para quem gosta de pizza de verdade.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 4. DESTAQUE DA PIZZARIA -->
+<!-- ============================================================ -->
+<section class="section-padding bg-[#FAF8F5] relative overflow-hidden" id="destaque" aria-label="Destaque da Pizzaria">
+    <!-- Atmospheric gold radial glow -->
+    <div class="absolute right-0 top-1/2 w-[500px] h-[500px] bg-[#B88A32]/8 rounded-full blur-3xl pointer-events-none -translate-y-1/2"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-14 reveal">
+            <span class="badge-gold mb-3">Sabor Especial</span>
+            <h2 class="heading-gold text-3xl sm:text-5xl font-bold mb-3">DESTAQUE DA PIZZARIA</h2>
+            <div class="divider-gold">
+                <svg class="peacock-feather-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 2C8 6 6 11 6 16c0 3.3 2.7 6 6 6s6-2.7 6-6c0-5-2-10-6-14z"/>
+                    <circle cx="12" cy="15" r="2.5" fill="currentColor"/>
+                </svg>
+            </div>
+            <p class="text-[#5C574E] text-base max-w-xl mx-auto font-body">
+                Conheça a pizza mais aclamada pelos nossos clientes no Jardim São Luís.
+            </p>
+        </div>
+
+        <!-- Masterpiece Highlight Card -->
+        <div class="card-luxury p-6 sm:p-10 lg:p-12 reveal">
+            <div class="corner-ornament-tl"></div>
+            <div class="corner-ornament-tr"></div>
+            <div class="corner-ornament-bl"></div>
+            <div class="corner-ornament-br"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                <!-- Food Photography of Frango com Catupiry -->
+                <div class="lg:col-span-6 relative group overflow-hidden rounded-sm border border-[#B88A32]/40 shadow-xl">
+                    <img src="imagens/destaque-frango-catupiry.jpg" alt="Pizza de Frango com Catupiry artesanal - Destaque Pizzaria Pavão" class="w-full h-[340px] sm:h-[400px] object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    
+                    <!-- Floating Tag -->
+                    <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-md border border-[#B88A32] px-3.5 py-1.5 rounded-full flex items-center gap-2 shadow-md">
+                        <span class="text-[#B88A32] text-sm font-bold">★</span>
+                        <span class="text-[#704E14] text-xs font-bold tracking-wider uppercase font-body">Mais Pedida</span>
+                    </div>
+
+                    <!-- Size tag -->
+                    <div class="absolute bottom-4 right-4 bg-black/80 backdrop-blur-md border border-[#B88A32]/40 px-3 py-1 rounded-sm text-white text-xs font-body">
+                        Grande &bull; 8 Fatias
+                    </div>
+                </div>
+
+                <!-- Info & CTA -->
+                <div class="lg:col-span-6 flex flex-col justify-center">
+                    <div class="inline-flex items-center gap-2 text-[#8C641F] text-xs tracking-widest uppercase font-bold mb-2">
+                        <span class="w-8 h-px bg-[#8C641F]"></span>
+                        Receita Tradicional Pavão
+                    </div>
+
+                    <h3 class="heading-gold text-3xl sm:text-4xl font-bold mb-4 text-[#141311]">
+                        FRANGO COM CATUPIRY
+                    </h3>
+
+                    <p class="text-[#423E37] text-base font-body leading-relaxed mb-6">
+                        Um dos sabores em destaque da Pizzaria Pavão. Frango suculento e desfiado no ponto certo, coberto com autêntico Catupiry cremoso gratinado, azeitonas selecionadas e o perfume inconfundível do orégano.
+                    </p>
+
+                    <!-- Price & Features -->
+                    <div class="flex items-baseline gap-4 mb-8 pb-6 border-b border-[#B88A32]/20">
+                        <span class="text-3xl sm:text-4xl font-bold font-heading text-[#8C641F]">R$ 49,90</span>
+                        <span class="text-[#7A7468] text-xs font-body">Valor sugerido protótipo</span>
+                    </div>
+
+                    <!-- Direct Order Button with exact required WhatsApp message -->
+                    <a href="https://wa.me/551158519187?text=Ol%C3%A1!%20Gostaria%20de%20pedir%20uma%20Pizza%20de%20Frango%20com%20Catupiry%20na%20Pizzaria%20Pav%C3%A3o." target="_blank" rel="noopener noreferrer" class="btn-gold self-start text-sm py-4 px-8">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Pedir Frango com Catupiry
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 5. CARDÁPIO -->
+<!-- ============================================================ -->
+<section class="section-padding bg-[#F3EFE6] relative" id="cardapio" aria-label="Cardápio da Pizzaria Pavão">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-12 reveal">
+            <span class="badge-gold mb-3">Variedade & Excelência</span>
+            <h2 class="heading-gold text-3xl sm:text-4xl md:text-5xl font-bold mb-3">NOSSO CARDÁPIO</h2>
+            <div class="divider-gold">
+                <svg class="peacock-feather-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 2C8 6 6 11 6 16c0 3.3 2.7 6 6 6s6-2.7 6-6c0-5-2-10-6-14z"/>
+                    <circle cx="12" cy="15" r="2.5" fill="currentColor"/>
+                </svg>
+            </div>
+            <p class="text-[#5C574E] text-base sm:text-lg max-w-xl mx-auto font-body">
+                Sabores clássicos e deliciosos para todos os gostos.
+            </p>
+            <div class="inline-block mt-3 px-4 py-1.5 border border-[#B88A32]/40 rounded-full bg-white text-[#704E14] text-xs font-bold tracking-widest uppercase font-body shadow-sm">
+                Pizzas Grandes &bull; 8 Fatias
+            </div>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12 reveal">
+            <button class="tab-btn active" data-filter="all">Todos os Sabores (20)</button>
+            <button class="tab-btn" data-filter="tradicionais">Tradicionais</button>
+            <button class="tab-btn" data-filter="catupiry">Com Catupiry</button>
+            <button class="tab-btn" data-filter="especiais">Especiais & Nobres</button>
+        </div>
+
+        <!-- Pizza Cards Grid (Populated dynamically from JS data) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="cardapioGrid">
+            <!-- Inserido dinamicamente via JS com suporte a filtros e animação -->
+        </div>
+
+        <!-- Showcase Banner: Pizza Margherita Artigianale -->
+        <div class="mt-14 card-luxury p-8 sm:p-10 reveal border border-[#B88A32]/30 bg-white">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-4 text-center lg:text-left">
+                    <span class="badge-gold mb-3">Tradição Italiana</span>
+                    <h3 class="heading-gold text-2xl sm:text-3xl font-bold mb-2">MASSA ARTESANAL</h3>
+                    <p class="text-[#5C574E] text-sm font-body leading-relaxed mb-4">
+                        Massa de fermentação no ponto ideal, crocante por fora e macia por dentro, assada com carinho e precisão.
+                    </p>
+                    <a href="#pedido" class="btn-outline text-xs py-2.5 px-6">Monte seu Pedido Abaixo</a>
+                </div>
+                <div class="lg:col-span-8 flex justify-center">
+                    <div class="relative group">
+                        <img src="imagens/pizza-margherita.jpg" alt="Pizza artesanal da Pizzaria Pavão" class="w-64 sm:w-80 h-64 sm:h-80 object-cover rounded-full border-4 border-[#B88A32] shadow-2xl transition-transform duration-700 group-hover:scale-105" loading="lazy">
+                        <div class="absolute -bottom-2 -right-2 bg-white border-2 border-[#B88A32] px-4 py-2 rounded-full text-[#8C641F] text-xs font-bold font-body shadow-md">
+                            100% Forno Quente
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SPEC Price Disclaimer Note -->
+        <div class="mt-12 text-center reveal">
+            <div class="max-w-2xl mx-auto border border-[#B88A32]/25 p-6 bg-white rounded-sm shadow-sm">
+                <p class="text-[#5C574E] text-xs leading-relaxed font-body mb-3">
+                    Valores sugeridos para apresentação do cardápio. Consulte a Pizzaria Pavão para confirmar preços, disponibilidade e taxa de entrega.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 text-[#7A7468] text-xs font-body">
+                    <span>Pizza meio a meio: considerar o valor do sabor de maior preço.</span>
+                    <span class="hidden sm:inline">&bull;</span>
+                    <span>Borda recheada: consultar disponibilidade e valor.</span>
+                </div>
+                <p class="text-[#7A7468] text-xs font-body mt-2">Taxa de entrega: consultar conforme a região.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 6. COMO PEDIR -->
+<!-- ============================================================ -->
+<section class="section-padding bg-[#FAF8F5] relative" id="como-pedir" aria-label="Como Pedir na Pizzaria Pavão">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16 reveal">
+            <span class="badge-gold mb-3">Passo a Passo</span>
+            <h2 class="heading-gold text-3xl sm:text-4xl md:text-5xl font-bold mb-3">COMO PEDIR</h2>
+            <div class="divider-gold">
+                <svg class="peacock-feather-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 2C8 6 6 11 6 16c0 3.3 2.7 6 6 6s6-2.7 6-6c0-5-2-10-6-14z"/>
+                    <circle cx="12" cy="15" r="2.5" fill="currentColor"/>
+                </svg>
+            </div>
+            <p class="text-[#5C574E] text-sm sm:text-base font-body">Praticidade e rapidez do início ao fim.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+            <!-- Connecting gold line (desktop) -->
+            <div class="hidden md:block absolute top-14 left-[18%] right-[18%] h-px bg-gradient-to-r from-transparent via-[#B88A32]/50 to-transparent"></div>
+
+            <!-- Step 1 -->
+            <div class="card-luxury p-8 text-center reveal relative" style="transition-delay: 0.1s;">
+                <div class="w-20 h-20 mx-auto mb-6 rounded-full border-2 border-[#B88A32] flex items-center justify-center bg-[#FAF8F5] shadow-md relative z-10">
+                    <span class="heading-gold text-3xl font-bold text-[#8C641F]">01</span>
+                </div>
+                <h3 class="heading-gold text-xl font-bold mb-3 text-[#141311]">ESCOLHA SUA PIZZA</h3>
+                <p class="text-[#5C574E] text-sm font-body">Confira nossos sabores e selecione seus favoritos no cardápio.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="card-luxury p-8 text-center reveal relative" style="transition-delay: 0.25s;">
+                <div class="w-20 h-20 mx-auto mb-6 rounded-full border-2 border-[#B88A32] flex items-center justify-center bg-[#FAF8F5] shadow-md relative z-10">
+                    <span class="heading-gold text-3xl font-bold text-[#8C641F]">02</span>
+                </div>
+                <h3 class="heading-gold text-xl font-bold mb-3 text-[#141311]">FAÇA SEU PEDIDO</h3>
+                <p class="text-[#5C574E] text-sm font-body">Envie sua escolha diretamente pelo WhatsApp ou pelo formulário abaixo.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="card-luxury p-8 text-center reveal relative" style="transition-delay: 0.4s;">
+                <div class="w-20 h-20 mx-auto mb-6 rounded-full border-2 border-[#B88A32] flex items-center justify-center bg-[#FAF8F5] shadow-md relative z-10">
+                    <span class="heading-gold text-3xl font-bold text-[#8C641F]">03</span>
+                </div>
+                <h3 class="heading-gold text-xl font-bold mb-3 text-[#141311]">RECEBA OU RETIRE</h3>
+                <p class="text-[#5C574E] text-sm font-body">Escolha entre entrega quentinha em sua casa ou retirada para viagem.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 7. AVALIAÇÕES (Depoimentos Reais Conforme SPEC) -->
+<!-- ============================================================ -->
+<section class="section-padding bg-[#F3EFE6] relative" id="avaliacoes" aria-label="Avaliações de Clientes">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16 reveal">
+            <span class="badge-gold mb-3">Reconhecimento</span>
+            <h2 class="heading-gold text-3xl sm:text-4xl md:text-5xl font-bold mb-3">O QUE NOSSOS CLIENTES DIZEM</h2>
+            <div class="divider-gold">
+                <svg class="peacock-feather-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 2C8 6 6 11 6 16c0 3.3 2.7 6 6 6s6-2.7 6-6c0-5-2-10-6-14z"/>
+                    <circle cx="12" cy="15" r="2.5" fill="currentColor"/>
+                </svg>
+            </div>
+
+            <!-- Rating Summary Widget -->
+            <div class="mt-6 flex flex-col items-center">
+                <div class="flex text-[#B88A32] text-2xl mb-1" aria-label="4,5 estrelas de 5">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span class="opacity-60">★</span>
+                </div>
+                <p class="text-[#141311] font-heading text-2xl font-bold">4,5 de 5,0</p>
+                <p class="text-[#7A7468] text-xs font-body tracking-wider uppercase font-semibold">Baseado em 27 avaliações no Google</p>
+            </div>
+        </div>
+
+        <!-- 3 Specific Real Reviews (per SPEC) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            
+            <!-- Review 1 -->
+            <div class="card-luxury p-8 flex flex-col justify-between reveal" style="transition-delay: 0.1s;">
+                <div class="corner-ornament-tl"></div>
+                <div class="corner-ornament-br"></div>
+                <div>
+                    <div class="flex text-[#B88A32] text-base mb-4">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="text-[#2C2A26] text-sm leading-relaxed font-body italic mb-6">
+                        "Pizza de ótima qualidade 😋"
+                    </p>
+                </div>
+                <div class="border-t border-[#B88A32]/20 pt-4 flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-[#B88A32]/15 flex items-center justify-center text-[#704E14] text-xs font-bold font-body">C</div>
+                    <span class="text-[#7A7468] text-xs font-body font-semibold">Cliente Verificado</span>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="card-luxury p-8 flex flex-col justify-between reveal" style="transition-delay: 0.25s;">
+                <div class="corner-ornament-tl"></div>
+                <div class="corner-ornament-br"></div>
+                <div>
+                    <div class="flex text-[#B88A32] text-base mb-4">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="text-[#2C2A26] text-sm leading-relaxed font-body italic mb-6">
+                        "Um cantinho super agradável, com um ótimo atendimento..."
+                    </p>
+                </div>
+                <div class="border-t border-[#B88A32]/20 pt-4 flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-[#B88A32]/15 flex items-center justify-center text-[#704E14] text-xs font-bold font-body">A</div>
+                    <span class="text-[#7A7468] text-xs font-body font-semibold">Cliente Verificado</span>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="card-luxury p-8 flex flex-col justify-between reveal" style="transition-delay: 0.4s;">
+                <div class="corner-ornament-tl"></div>
+                <div class="corner-ornament-br"></div>
+                <div>
+                    <div class="flex text-[#B88A32] text-base mb-4">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <p class="text-[#2C2A26] text-sm leading-relaxed font-body italic mb-6">
+                        "Melhor pizza do Jd Ibirapuera, com melhor atendimento possível, sem contar que os entregadores são bem rápidos..."
+                    </p>
+                </div>
+                <div class="border-t border-[#B88A32]/20 pt-4 flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-[#B88A32]/15 flex items-center justify-center text-[#704E14] text-xs font-bold font-body">M</div>
+                    <span class="text-[#7A7468] text-xs font-body font-semibold">Cliente Verificado</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Real Qualities Highlight Tags (SPEC) -->
+        <div class="flex flex-wrap items-center justify-center gap-3 reveal">
+            <span class="px-5 py-2.5 border border-[#B88A32]/35 text-[#704E14] text-xs tracking-wider uppercase font-body font-semibold bg-white rounded-full shadow-sm">Pizza saborosa</span>
+            <span class="px-5 py-2.5 border border-[#B88A32]/35 text-[#704E14] text-xs tracking-wider uppercase font-body font-semibold bg-white rounded-full shadow-sm">Entrega rápida</span>
+            <span class="px-5 py-2.5 border border-[#B88A32]/35 text-[#704E14] text-xs tracking-wider uppercase font-body font-semibold bg-white rounded-full shadow-sm">Bom atendimento</span>
+            <span class="px-5 py-2.5 border border-[#B88A32]/35 text-[#704E14] text-xs tracking-wider uppercase font-body font-semibold bg-white rounded-full shadow-sm">Produtos de qualidade</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 8. LOCALIZAÇÃO E CONTATO (Dados Reais do SPEC) -->
+<!-- ============================================================ -->
+<section class="section-padding bg-[#FAF8F5] relative" id="contato" aria-label="Localização e Contato">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16 reveal">
+            <span class="badge-gold mb-3">Onde Estamos</span>
+            <h2 class="heading-gold text-3xl sm:text-4xl md:text-5xl font-bold mb-3">VENHA CONHECER A PIZZARIA PAVÃO</h2>
+            <div class="divider-gold">
+                <svg class="peacock-feather-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 2C8 6 6 11 6 16c0 3.3 2.7 6 6 6s6-2.7 6-6c0-5-2-10-6-14z"/>
+                    <circle cx="12" cy="15" r="2.5" fill="currentColor"/>
+                </svg>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            
+            <!-- Left: Exact Real Data -->
+            <div class="card-luxury p-8 sm:p-10 reveal-left">
+                <div class="corner-ornament-tl"></div>
+                <div class="corner-ornament-br"></div>
+
+                <!-- Address -->
+                <div class="mb-8">
+                    <h3 class="heading-gold text-lg font-bold mb-3 flex items-center gap-3">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8C641F" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Endereço
+                    </h3>
+                    <p class="text-[#423E37] text-sm font-body leading-relaxed pl-8">
+                        Tv. do Carteiro, 3<br>
+                        Jardim São Luís, São Paulo - SP<br>
+                        CEP 05813-045<br>
+                        <span class="text-[#8C641F] text-xs font-semibold">Plus Code: 87RC+VJ Jardim São Luís</span>
+                    </p>
+                </div>
+
+                <!-- Phone -->
+                <div class="mb-8">
+                    <h3 class="heading-gold text-lg font-bold mb-3 flex items-center gap-3">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8C641F" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Telefone
+                    </h3>
+                    <div class="pl-8">
+                        <a href="tel:+551158519187" class="text-[#141311] text-base font-body font-bold hover:text-[#8C641F] transition-colors inline-block">
+                            (11) 5851-9187
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="mb-8">
+                    <h3 class="heading-gold text-lg font-bold mb-3 flex items-center gap-3">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8C641F" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        Serviços Oferecidos
+                    </h3>
+                    <div class="flex flex-col gap-2 pl-8">
+                        <span class="text-[#423E37] text-sm font-body flex items-center gap-2">
+                            <span class="text-[#8C641F] font-bold">&#10003;</span> Entrega (Delivery)
+                        </span>
+                        <span class="text-[#423E37] text-sm font-body flex items-center gap-2">
+                            <span class="text-[#8C641F] font-bold">&#10003;</span> Para viagem (Retirada)
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Payments -->
+                <div>
+                    <h3 class="heading-gold text-lg font-bold mb-3 flex items-center gap-3">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8C641F" stroke-width="1.8"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                        Formas de Pagamento
+                    </h3>
+                    <div class="flex flex-col gap-2 pl-8">
+                        <span class="text-[#423E37] text-sm font-body flex items-center gap-2">
+                            <span class="text-[#8C641F] font-bold">&#10003;</span> Cartão de crédito
+                        </span>
+                        <span class="text-[#423E37] text-sm font-body flex items-center gap-2">
+                            <span class="text-[#8C641F] font-bold">&#10003;</span> Cartão de débito
+                        </span>
+                        <span class="text-[#423E37] text-sm font-body flex items-center gap-2">
+                            <span class="text-[#8C641F] font-bold">&#10003;</span> Pagamento por dispositivo móvel via NFC
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right: Interactive Map Card -->
+            <div class="card-luxury p-8 sm:p-10 flex flex-col items-center justify-center text-center reveal-right">
+                <div class="corner-ornament-tr"></div>
+                <div class="corner-ornament-bl"></div>
+
+                <!-- Stylized Compass / Map Pin Icon -->
+                <div class="w-24 h-24 mx-auto mb-6 rounded-full border-2 border-[#B88A32] flex items-center justify-center bg-[#FAF8F5] shadow-lg relative">
+                    <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#8C641F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                </div>
+
+                <span class="badge-gold mb-3">Atendimento Local</span>
+                <h3 class="heading-gold text-3xl font-bold mb-2 text-[#141311]">Jardim São Luís</h3>
+                <p class="text-[#5C574E] text-sm font-body mb-8">São Paulo - SP</p>
+                <p class="text-[#7A7468] text-xs font-body max-w-sm mb-8 leading-relaxed">
+                    Localizada na Travessa do Carteiro, atendemos todo o bairro e proximidades com agilidade e compromisso com o calor da sua pizza.
+                </p>
+
+                <!-- Actions: Como Chegar + WhatsApp -->
+                <div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+                    <a href="https://www.google.com/maps/search/Tv.+do+Carteiro,+3+-+Jardim+S%C3%A3o+Lu%C3%ADs,+S%C3%A3o+Paulo+-+SP,+05813-045" target="_blank" rel="noopener noreferrer" class="btn-outline">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                        Como Chegar no Maps
+                    </a>
+                    <a href="https://wa.me/551158519187?text=Ol%C3%A1%2C%20Pizzaria%20Pav%C3%A3o!%20Gostaria%20de%20fazer%20um%20pedido." target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Falar no WhatsApp
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 9. FORMULÁRIO DE PEDIDO DINÂMICO -->
+<!-- ============================================================ -->
+<section class="section-padding bg-[#F3EFE6] relative" id="pedido" aria-label="Formulário de Pedido">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12 reveal">
+            <span class="badge-gold mb-3">Pedido Direto</span>
+            <h2 class="heading-gold text-3xl sm:text-4xl md:text-5xl font-bold mb-3">FAÇA SEU PEDIDO</h2>
+            <div class="divider-gold">
+                <svg class="peacock-feather-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 2C8 6 6 11 6 16c0 3.3 2.7 6 6 6s6-2.7 6-6c0-5-2-10-6-14z"/>
+                    <circle cx="12" cy="15" r="2.5" fill="currentColor"/>
+                </svg>
+            </div>
+            <p class="text-[#5C574E] text-xs sm:text-sm font-body">
+                Preencha os dados e envie seu pedido formatado automaticamente para o nosso WhatsApp.
+            </p>
+        </div>
+
+        <form id="orderForm" class="card-luxury p-8 sm:p-12 reveal" novalidate>
+            <div class="corner-ornament-tl"></div>
+            <div class="corner-ornament-tr"></div>
+            <div class="corner-ornament-bl"></div>
+            <div class="corner-ornament-br"></div>
+
+            <!-- Nome -->
+            <div class="mb-6">
+                <label for="nome" class="form-label">Nome Completo *</label>
+                <input type="text" id="nome" name="nome" class="form-input" placeholder="Digite seu nome" required aria-required="true">
+                <p class="form-error" id="nomeError">Por favor, informe seu nome.</p>
+            </div>
+
+            <!-- Telefone -->
+            <div class="mb-6">
+                <label for="telefone" class="form-label">Telefone / WhatsApp *</label>
+                <input type="tel" id="telefone" name="telefone" class="form-input" placeholder="(11) 99999-9999" required aria-required="true">
+                <p class="form-error" id="telefoneError">Por favor, informe seu telefone.</p>
+            </div>
+
+            <!-- Tipo de Pedido (Radio) -->
+            <div class="mb-6">
+                <label class="form-label">Tipo de Pedido *</label>
+                <div class="grid grid-cols-2 gap-4">
+                    <label class="flex items-center gap-3 p-3.5 bg-[#FAF8F5] border border-[#B88A32]/30 cursor-pointer rounded-sm hover:border-[#8C641F] transition-colors">
+                        <input type="radio" name="tipoPedido" value="Entrega" class="accent-[#8C641F] w-4 h-4" required>
+                        <span class="text-[#141311] text-sm font-body font-semibold">Entrega</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3.5 bg-[#FAF8F5] border border-[#B88A32]/30 cursor-pointer rounded-sm hover:border-[#8C641F] transition-colors">
+                        <input type="radio" name="tipoPedido" value="Para viagem" class="accent-[#8C641F] w-4 h-4">
+                        <span class="text-[#141311] text-sm font-body font-semibold">Para viagem</span>
+                    </label>
+                </div>
+                <p class="form-error" id="tipoPedidoError">Por favor, selecione o tipo de pedido.</p>
+            </div>
+
+            <!-- Sabor (Select populated from JS array) -->
+            <div class="mb-6">
+                <label for="sabor" class="form-label">Escolha o Sabor *</label>
+                <select id="sabor" name="sabor" class="form-input" required aria-required="true">
+                    <option value="">Selecione uma pizza...</option>
+                </select>
+                <p class="form-error" id="saborError">Por favor, selecione um sabor.</p>
+            </div>
+
+            <!-- Quantidade -->
+            <div class="mb-6">
+                <label for="quantidade" class="form-label">Quantidade de Pizzas *</label>
+                <input type="number" id="quantidade" name="quantidade" class="form-input" placeholder="1" min="1" max="20" value="1" required aria-required="true">
+                <p class="form-error" id="quantidadeError">Por favor, informe a quantidade desejada.</p>
+            </div>
+
+            <!-- Live Price Display -->
+            <div class="mb-6">
+                <label class="form-label">Total Sugerido (Protótipo)</label>
+                <div class="bg-[#FAF8F5] border border-[#B88A32]/30 p-4 rounded-sm flex items-center justify-between">
+                    <span class="text-[#5C574E] text-sm font-body">Valor estimado:</span>
+                    <span class="text-[#8C641F] text-2xl font-heading font-bold" id="totalSugerido">R$ 0,00</span>
+                </div>
+                <p class="text-[#7A7468] text-[11px] font-body mt-1.5">* Taxa de entrega a consultar no WhatsApp.</p>
+            </div>
+
+            <!-- Endereço (Conditional if Entrega) -->
+            <div class="mb-6" id="enderecoContainer" style="display: none;">
+                <label for="endereco" class="form-label">Endereço de Entrega *</label>
+                <input type="text" id="endereco" name="endereco" class="form-input" placeholder="Rua, número, complemento, bairro">
+                <p class="form-error" id="enderecoError">Por favor, informe o endereço de entrega.</p>
+            </div>
+
+            <!-- Observações -->
+            <div class="mb-8">
+                <label for="observacoes" class="form-label">Observações do Pedido (Opcional)</label>
+                <textarea id="observacoes" name="observacoes" class="form-input" rows="3" placeholder="Ex: Sem cebola, massa bem assada, etc."></textarea>
+            </div>
+
+            <!-- Submit WhatsApp Button -->
+            <button type="submit" class="btn-gold w-full text-sm py-4">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Enviar Pedido pelo WhatsApp
+            </button>
+        </form>
+
+    </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 10. FOOTER (Elegante em Marfim Nobre com Logo em Destaque) -->
+<!-- ============================================================ -->
+<footer class="bg-[#EAE4D5] border-t-2 border-[#B88A32]/40 py-16" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12 items-start">
+            
+            <!-- Brand Column -->
+            <div class="text-center md:text-left">
+                <div class="flex items-center gap-3 mb-4 justify-center md:justify-start">
+                    <img src="imagens/logo.jpg" alt="Logo Pizzaria Pavão" class="h-14 w-14 rounded-full border-2 border-[#B88A32] object-cover shadow-md">
+                    <div>
+                        <p class="heading-gold text-xl font-bold tracking-wider text-[#141311]">PIZZARIA <span class="text-shimmer">PAVÃO</span></p>
+                        <p class="text-[#8C641F] text-[10px] tracking-widest uppercase font-body font-bold">Jardim São Luís &bull; São Paulo</p>
+                    </div>
+                </div>
+                <p class="text-[#4A453C] text-sm font-body leading-relaxed max-w-sm mx-auto md:mx-0">
+                    Sabor, tradição e qualidade em cada fatia. Atendimento ágil e atencioso para fazer da sua pizza um momento inesquecível.
+                </p>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="text-center">
+                <h4 class="heading-gold text-sm font-bold mb-4 tracking-widest uppercase text-[#704E14]">Navegação</h4>
+                <div class="flex flex-col gap-2.5">
+                    <a href="#inicio" class="text-[#4A453C] text-sm font-body font-semibold hover:text-[#8C641F] transition-colors">Início</a>
+                    <a href="#sobre" class="text-[#4A453C] text-sm font-body font-semibold hover:text-[#8C641F] transition-colors">Sobre</a>
+                    <a href="#destaque" class="text-[#4A453C] text-sm font-body font-semibold hover:text-[#8C641F] transition-colors">Destaque</a>
+                    <a href="#cardapio" class="text-[#4A453C] text-sm font-body font-semibold hover:text-[#8C641F] transition-colors">Cardápio</a>
+                    <a href="#como-pedir" class="text-[#4A453C] text-sm font-body font-semibold hover:text-[#8C641F] transition-colors">Como Pedir</a>
+                    <a href="#avaliacoes" class="text-[#4A453C] text-sm font-body font-semibold hover:text-[#8C641F] transition-colors">Avaliações</a>
+                    <a href="#contato" class="text-[#4A453C] text-sm font-body font-semibold hover:text-[#8C641F] transition-colors">Localização</a>
+                </div>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="text-center md:text-right">
+                <h4 class="heading-gold text-sm font-bold mb-4 tracking-widest uppercase text-[#704E14]">Contato & Atendimento</h4>
+                <p class="text-[#4A453C] text-sm font-body leading-relaxed mb-3">
+                    Tv. do Carteiro, 3 &bull; Jardim São Luís<br>
+                    São Paulo - SP &bull; CEP 05813-045
+                </p>
+                <a href="tel:+551158519187" class="text-[#8C641F] text-base font-bold font-body hover:underline block mb-2">
+                    (11) 5851-9187
+                </a>
+                <p class="text-[#7A7468] text-xs font-body font-semibold">Entrega &bull; Para viagem</p>
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-[#B88A32]/20 pt-8 text-center">
+            <p class="text-[#7A7468] text-xs font-body tracking-wider">
+                &copy; 2026 Pizzaria Pavão. Todos os direitos reservados.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- ============================================================ -->
+<!-- 11. BOTÃO FLUTUANTE DO WHATSAPP -->
+<!-- ============================================================ -->
+<a href="https://wa.me/551158519187?text=Ol%C3%A1%2C%20Pizzaria%20Pav%C3%A3o!%20Gostaria%20de%20fazer%20um%20pedido." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp" id="whatsappFloat">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="tooltip">Fale conosco pelo WhatsApp</span>
+</a>
+
+<!-- ============================================================ -->
+<!-- 12. JAVASCRIPT (Pure Vanilla JS) -->
+<!-- ============================================================ -->
+<script>
+(function() {
+    'use strict';
+
+    // ============================================================
+    // DATA: 20 Sabores Oficiais Conforme o SPEC
+    // ============================================================
+    const pizzas = [
+        { id: 1, nome: "Mussarela", categoria: "tradicionais", descricao: "Mussarela, tomate e orégano.", preco: 42.90, destaque: false },
+        { id: 2, nome: "Calabresa", categoria: "tradicionais", descricao: "Calabresa fatiada, cebola e orégano.", preco: 44.90, destaque: false },
+        { id: 3, nome: "Calabresa com Catupiry", categoria: "catupiry", descricao: "Calabresa, Catupiry e orégano.", preco: 49.90, destaque: false },
+        { id: 4, nome: "Frango com Catupiry", categoria: "catupiry", descricao: "Frango desfiado, Catupiry e orégano.", preco: 49.90, destaque: true },
+        { id: 5, nome: "Frango com Milho", categoria: "tradicionais", descricao: "Frango desfiado, milho e mussarela.", preco: 47.90, destaque: false },
+        { id: 6, nome: "Portuguesa", categoria: "tradicionais", descricao: "Presunto, ovos, cebola, ervilha, mussarela e azeitona.", preco: 49.90, destaque: false },
+        { id: 7, nome: "Presunto e Queijo", categoria: "tradicionais", descricao: "Presunto, mussarela, tomate e orégano.", preco: 44.90, destaque: false },
+        { id: 8, nome: "Quatro Queijos", categoria: "especiais", descricao: "Mussarela, Catupiry, provolone e parmesão.", preco: 54.90, destaque: false },
+        { id: 9, nome: "Bacon", categoria: "especiais", descricao: "Mussarela, bacon e orégano.", preco: 49.90, destaque: false },
+        { id: 10, nome: "Bacon com Milho", categoria: "especiais", descricao: "Mussarela, bacon, milho e orégano.", preco: 49.90, destaque: false },
+        { id: 11, nome: "Napolitana", categoria: "tradicionais", descricao: "Mussarela, tomate, parmesão e orégano.", preco: 44.90, destaque: false },
+        { id: 12, nome: "Marguerita", categoria: "tradicionais", descricao: "Mussarela, tomate, manjericão e orégano.", preco: 47.90, destaque: false },
+        { id: 13, nome: "Atum", categoria: "especiais", descricao: "Atum, cebola, mussarela e orégano.", preco: 49.90, destaque: false },
+        { id: 14, nome: "Palmito", categoria: "especiais", descricao: "Palmito, mussarela, tomate e orégano.", preco: 49.90, destaque: false },
+        { id: 15, nome: "Milho com Catupiry", categoria: "catupiry", descricao: "Milho, Catupiry, mussarela e orégano.", preco: 47.90, destaque: false },
+        { id: 16, nome: "Baiana", categoria: "especiais", descricao: "Calabresa, cebola, pimenta e mussarela.", preco: 47.90, destaque: false },
+        { id: 17, nome: "Pepperoni", categoria: "especiais", descricao: "Pepperoni, mussarela e orégano.", preco: 54.90, destaque: false },
+        { id: 18, nome: "Vegetariana", categoria: "especiais", descricao: "Mussarela, milho, palmito, tomate, cebola e azeitona.", preco: 49.90, destaque: false },
+        { id: 19, nome: "Moda da Casa", categoria: "especiais", descricao: "Mussarela, presunto, calabresa, milho, cebola e azeitona.", preco: 54.90, destaque: false },
+        { id: 20, nome: "Bacon com Catupiry", categoria: "catupiry", descricao: "Mussarela, bacon, Catupiry e orégano.", preco: 52.90, destaque: false }
+    ];
+
+    const WHATSAPP_NUMBER = '551158519187';
+    const formatCurrency = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+
+    // ============================================================
+    // RENDER: Cardápio Grid com Filtros e Badges de Luxo
+    // ============================================================
+    function renderCardapio(filter = 'all') {
+        const grid = document.getElementById('cardapioGrid');
+        if (!grid) return;
+
+        const filteredPizzas = filter === 'all' 
+            ? pizzas 
+            : pizzas.filter(p => p.categoria === filter);
+
+        grid.innerHTML = filteredPizzas.map((pizza, index) => {
+            const isHighlight = pizza.nome === "Frango com Catupiry";
+            return `
+            <div class="card-luxury p-6 flex flex-col justify-between reveal ${isHighlight ? 'gold-border-glow' : ''}" style="transition-delay: ${Math.min(index * 0.05, 0.5)}s;">
+                <div class="corner-ornament-tl"></div>
+                <div class="corner-ornament-tr"></div>
+                
+                <div>
+                    <!-- Top row: Category tag & Highlight badge -->
+                    <div class="flex items-center justify-between gap-2 mb-3">
+                        <span class="text-[10px] tracking-widest uppercase font-bold text-[#8C641F] font-body">8 Fatias</span>
+                        ${isHighlight ? `
+                            <span class="px-2.5 py-0.5 rounded-full bg-[#B88A32] text-white text-[9px] font-bold tracking-wider uppercase font-body flex items-center gap-1 shadow-sm">
+                                ★ Destaque
+                            </span>
+                        ` : ''}
+                    </div>
+
+                    <!-- Pizza Title -->
+                    <h3 class="heading-gold text-xl font-bold leading-tight mb-2 text-[#141311]">${pizza.nome}</h3>
+                    
+                    <!-- Description -->
+                    <p class="text-[#5C574E] text-xs font-body font-normal leading-relaxed mb-6">${pizza.descricao}</p>
+                </div>
+
+                <!-- Bottom row: Price & Order Button -->
+                <div class="pt-4 border-t border-[#B88A32]/20 mt-auto">
+                    <div class="flex items-baseline justify-between mb-4">
+                        <span class="text-[#7A7468] text-[11px] font-body font-medium">Sugerido</span>
+                        <span class="text-[#8C641F] font-heading font-bold text-2xl">${formatCurrency.format(pizza.preco)}</span>
+                    </div>
+                    <button onclick="pedirPizza('${pizza.nome.replace(/'/g, "\\'")}', ${pizza.preco})" class="btn-gold w-full text-xs py-2.5" aria-label="Pedir pizza ${pizza.nome}">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        Pedir
+                    </button>
+                </div>
+            </div>
+            `;
+        }).join('');
+
+        setupCardObserver();
+    }
+
+    // ============================================================
+    // TABS: Filter Buttons Setup
+    // ============================================================
+    function setupFilterTabs() {
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const filter = this.dataset.filter;
+                renderCardapio(filter);
+            });
+        });
+    }
+
+    // ============================================================
+    // RENDER: Select Options in Form
+    // ============================================================
+    function renderSelectOptions() {
+        const select = document.getElementById('sabor');
+        if (!select) return;
+
+        select.innerHTML = '<option value="">Selecione uma pizza...</option>';
+
+        pizzas.forEach(pizza => {
+            const option = document.createElement('option');
+            option.value = pizza.nome;
+            option.textContent = `${pizza.nome} — ${formatCurrency.format(pizza.preco)}`;
+            option.dataset.preco = pizza.preco;
+            select.appendChild(option);
+        });
+    }
+
+    // ============================================================
+    // WHATSAPP: Quick Order direct from card
+    // ============================================================
+    window.pedirPizza = function(nome, preco) {
+        const mensagem = `Olá, Pizzaria Pavão! Gostaria de pedir:\n\nPizza: ${nome}\nQuantidade: 1\nValor sugerido: ${formatCurrency.format(preco)}\n\nGostaria de confirmar o valor e a disponibilidade.`;
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensagem)}`;
+        window.open(url, '_blank');
+    };
+
+    // ============================================================
+    // FORM: Live Price Calculation
+    // ============================================================
+    function updatePrice() {
+        const saborSelect = document.getElementById('sabor');
+        const quantidadeInput = document.getElementById('quantidade');
+        const totalDisplay = document.getElementById('totalSugerido');
+
+        if (!saborSelect || !quantidadeInput || !totalDisplay) return;
+
+        const selectedOption = saborSelect.options[saborSelect.selectedIndex];
+        const preco = selectedOption && selectedOption.dataset.preco ? parseFloat(selectedOption.dataset.preco) : 0;
+        const quantidade = parseInt(quantidadeInput.value) || 0;
+        const total = preco * Math.max(0, quantidade);
+
+        totalDisplay.textContent = formatCurrency.format(total);
+    }
+
+    // ============================================================
+    // FORM: Conditional Address Display
+    // ============================================================
+    function toggleEnderecoField() {
+        const tipoInputs = document.querySelectorAll('input[name="tipoPedido"]');
+        const enderecoContainer = document.getElementById('enderecoContainer');
+        const enderecoInput = document.getElementById('endereco');
+        if (!enderecoContainer || !enderecoInput) return;
+
+        tipoInputs.forEach(input => {
+            input.addEventListener('change', function() {
+                if (this.value === 'Entrega') {
+                    enderecoContainer.style.display = 'block';
+                    enderecoInput.setAttribute('required', 'true');
+                } else {
+                    enderecoContainer.style.display = 'none';
+                    enderecoInput.removeAttribute('required');
+                    enderecoInput.value = '';
+                    const err = document.getElementById('enderecoError');
+                    if (err) err.classList.remove('active');
+                }
+            });
+        });
+    }
+
+    // ============================================================
+    // FORM: Validation & Formatted WhatsApp Submission
+    // ============================================================
+    function setupForm() {
+        const form = document.getElementById('orderForm');
+        if (!form) return;
+
+        const saborSelect = document.getElementById('sabor');
+        const quantidadeInput = document.getElementById('quantidade');
+
+        saborSelect.addEventListener('change', updatePrice);
+        quantidadeInput.addEventListener('input', updatePrice);
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            let isValid = true;
+            document.querySelectorAll('.form-error').forEach(el => el.classList.remove('active'));
+
+            const nome = document.getElementById('nome').value.trim();
+            const telefone = document.getElementById('telefone').value.trim();
+            const tipoChecked = document.querySelector('input[name="tipoPedido"]:checked');
+            const sabor = saborSelect.value;
+            const quantidade = parseInt(quantidadeInput.value) || 0;
+            const endereco = document.getElementById('endereco').value.trim();
+            const observacoes = document.getElementById('observacoes').value.trim();
+
+            if (!nome) {
+                document.getElementById('nomeError').classList.add('active');
+                isValid = false;
+            }
+            if (!telefone) {
+                document.getElementById('telefoneError').classList.add('active');
+                isValid = false;
+            }
+            if (!tipoChecked) {
+                document.getElementById('tipoPedidoError').classList.add('active');
+                isValid = false;
+            }
+            if (!sabor) {
+                document.getElementById('saborError').classList.add('active');
+                isValid = false;
+            }
+            if (quantidade < 1) {
+                document.getElementById('quantidadeError').classList.add('active');
+                isValid = false;
+            }
+            if (tipoChecked && tipoChecked.value === 'Entrega' && !endereco) {
+                document.getElementById('enderecoError').classList.add('active');
+                isValid = false;
+            }
+
+            if (!isValid) return;
+
+            const tipo = tipoChecked.value;
+            const pizza = pizzas.find(p => p.nome === sabor);
+            const precoUnit = pizza ? pizza.preco : 0;
+            const totalCalc = precoUnit * quantidade;
+
+            let mensagem = `Olá, Pizzaria Pavão!\n\nGostaria de fazer um pedido.\n\nNome: ${nome}\nTelefone: ${telefone}\n\nPizza: ${sabor}\nQuantidade: ${quantidade}\nValor sugerido: ${formatCurrency.format(precoUnit)}\nTotal sugerido: ${formatCurrency.format(totalCalc)}\n\nTipo de pedido: ${tipo}`;
+
+            if (tipo === 'Entrega') {
+                mensagem += `\nEndereço: ${endereco}`;
+            }
+
+            if (observacoes) {
+                mensagem += `\nObservações: ${observacoes}`;
+            }
+
+            mensagem += `\n\nGostaria de confirmar o pedido, o valor e a taxa de entrega.`;
+
+            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank');
+        });
+    }
+
+    // ============================================================
+    // NAVBAR: Responsive Scroll Effect
+    // ============================================================
+    function setupNavbar() {
+        const navbar = document.getElementById('navbar');
+        if (!navbar) return;
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 40) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }, { passive: true });
+    }
+
+    // ============================================================
+    // MOBILE DRAWER
+    // ============================================================
+    function setupMobileMenu() {
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (!hamburger || !mobileMenu) return;
+
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            const isActive = mobileMenu.classList.contains('active');
+            document.body.style.overflow = isActive ? 'hidden' : '';
+            this.setAttribute('aria-expanded', isActive);
+        });
+
+        mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
+
+    // ============================================================
+    // SMOOTH SCROLL WITH NAVBAR OFFSET
+    // ============================================================
+    function setupSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#' || !targetId) return;
+
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    const nav = document.getElementById('navbar');
+                    const navHeight = nav ? nav.offsetHeight : 80;
+                    const top = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+    }
+
+    // ============================================================
+    // CANVAS: Subtle Golden Dust in Hero (Light theme optimized)
+    // ============================================================
+    function setupEmbersCanvas() {
+        const canvas = document.getElementById('embersCanvas');
+        if (!canvas) return;
+
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            canvas.style.display = 'none';
+            return;
+        }
+
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = canvas.parentElement.offsetWidth;
+        let height = canvas.height = canvas.parentElement.offsetHeight;
+
+        window.addEventListener('resize', function() {
+            if (!canvas.parentElement) return;
+            width = canvas.width = canvas.parentElement.offsetWidth;
+            height = canvas.height = canvas.parentElement.offsetHeight;
+        }, { passive: true });
+
+        const particles = [];
+        const count = 32;
+
+        for (let i = 0; i < count; i++) {
+            particles.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                radius: Math.random() * 2 + 0.6,
+                alpha: Math.random() * 0.5 + 0.2,
+                speedY: Math.random() * 0.5 + 0.2,
+                speedX: (Math.random() - 0.5) * 0.3,
+                flicker: Math.random() * 0.02 + 0.005
+            });
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+
+            for (let i = 0; i < particles.length; i++) {
+                const p = particles[i];
+                p.y -= p.speedY;
+                p.x += p.speedX;
+                p.alpha += Math.sin(Date.now() * p.flicker) * 0.01;
+
+                if (p.y < 0) {
+                    p.y = height + 10;
+                    p.x = Math.random() * width;
+                }
+                if (p.x < 0) p.x = width;
+                if (p.x > width) p.x = 0;
+
+                ctx.save();
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(184, 138, 50, ${Math.max(0.15, Math.min(0.7, p.alpha))})`;
+                ctx.shadowBlur = 4;
+                ctx.shadowColor = '#B88A32';
+                ctx.fill();
+                ctx.restore();
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    }
+
+    // ============================================================
+    // INTERSECTION OBSERVER FOR DYNAMIC REVEAL
+    // ============================================================
+    let observer;
+    function setupRevealAnimations() {
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) {
+            document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+                el.classList.add('visible');
+            });
+            return;
+        }
+
+        observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+            observer.observe(el);
+        });
+    }
+
+    function setupCardObserver() {
+        if (!observer) return;
+        document.querySelectorAll('#cardapioGrid .reveal').forEach(el => {
+            observer.observe(el);
+        });
+    }
+
+    // ============================================================
+    // INITIALIZATION
+    // ============================================================
+    document.addEventListener('DOMContentLoaded', function() {
+        renderCardapio('all');
+        renderSelectOptions();
+        setupFilterTabs();
+        setupNavbar();
+        setupMobileMenu();
+        setupSmoothScroll();
+        setupForm();
+        toggleEnderecoField();
+        setupRevealAnimations();
+        setupEmbersCanvas();
+    });
+
+})();
+</script>
+
+</body>
+</html>
